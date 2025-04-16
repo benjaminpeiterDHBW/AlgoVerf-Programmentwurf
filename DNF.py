@@ -57,6 +57,8 @@ def test_implementation(nn, X):
     
     for x in X:
         y, _ = nn.forward(x)
+        print("Input :", x)
+        print("Netzoutput: ", y)
     
     assert np.array_equal(nn.w, initial_weights_w), "Gewichte w haben sich geändert!"
     assert np.array_equal(nn.v, initial_weights_v), "Schwellwerte v haben sich geändert!"
